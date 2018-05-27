@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scenario xmlns="http://www.omnigroup.com/namespace/OmniPlan/v2" xmlns:opns="http://www.omnigroup.com/namespace/OmniPlan/v2" id="fMHk5wA1uWL">
+  <start-date>2018-04-15T23:00:00.000Z</start-date>
+  <prototype-task>
+    <task id="t-2">
+      <title>タスク 1</title>
+      <effort>28800</effort>
+    </task>
+  </prototype-task>
+  <prototype-task>
+    <task id="t-3">
+      <title>マイルストーン 1</title>
+      <type>milestone</type>
+    </task>
+  </prototype-task>
+  <prototype-task>
+    <task id="t-4">
+      <title>グループ 1</title>
+      <type>group</type>
+    </task>
+  </prototype-task>
+  <prototype-resource>
+    <resource id="r-2">
+      <name>リソース 1</name>
+      <type>Staff</type>
+    </resource>
+  </prototype-resource>
+  <prototype-resource>
+    <resource id="r-3">
+      <name>設備 1</name>
+      <type>Equipment</type>
+    </resource>
+  </prototype-resource>
+  <prototype-resource>
+    <resource id="r-4">
+      <name>資材 1</name>
+      <type>Material</type>
+      <units-available>0</units-available>
+      <efficiency>0</efficiency>
+    </resource>
+  </prototype-resource>
+  <prototype-resource>
+    <resource id="r-5">
+      <name>グループ 1</name>
+      <type>Group</type>
+    </resource>
+  </prototype-resource>
+  <top-resource idref="r-1"/>
+  <resource id="r-1">
+    <name/>
+    <type>Group</type>
+    <child-resource idref="r1"/>
+  </resource>
+  <resource id="r1">
+    <name>リソース 1</name>
+    <type>Staff</type>
+  </resource>
+  <top-task idref="t-1"/>
+  <task id="t-1">
+    <type>group</type>
+    <child-task idref="t12"/>
+    <child-task idref="t13"/>
+    <child-task idref="t14"/>
+    <child-task idref="t15"/>
+    <child-task idref="t16"/>
+    <child-task idref="t17"/>
+    <child-task idref="t31"/>
+    <child-task idref="t24"/>
+    <child-task idref="t25"/>
+    <child-task idref="t27"/>
+    <child-task idref="t33"/>
+    <child-task idref="t32"/>
+    <child-task idref="t34"/>
+    <child-task idref="t39"/>
+    <child-task idref="t43"/>
+    <child-task idref="t45"/>
+  </task>
+  <task id="t12">
+    <title>オンラインショップの仕組みを調査</title>
+    <effort>144000</effort>
+    <effort-done>144000</effort-done>
+    <start-constraint-date>2018-04-16T00:00:00.000Z</start-constraint-date>
+    <start-no-earlier-than>2018-04-16T00:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t13">
+    <title>グループを編む</title>
+    <effort>28800</effort>
+    <effort-done>28800</effort-done>
+    <start-constraint-date>2018-04-15T23:00:00.000Z</start-constraint-date>
+    <start-no-earlier-than>2018-04-15T23:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t14">
+    <title> ポジショニングマップ</title>
+    <effort>144000</effort>
+    <effort-done>144000</effort-done>
+    <start-constraint-date>2018-04-22T23:00:00.000Z</start-constraint-date>
+    <prerequisite-task idref="t12"/>
+    <prerequisite-task idref="t13"/>
+    <start-no-earlier-than>2018-04-22T23:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t15">
+    <title>ユーザー要件分析</title>
+    <effort>288000</effort>
+    <effort-done>187200</effort-done>
+    <start-constraint-date>2018-04-30T23:00:00.000Z</start-constraint-date>
+    <prerequisite-task idref="t14"/>
+    <start-no-earlier-than>2018-04-30T23:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t16">
+    <title>開発スケジュール</title>
+    <effort>144000</effort>
+    <start-constraint-date>2018-05-14T07:00:00.000Z</start-constraint-date>
+    <prerequisite-task idref="t15"/>
+    <start-no-earlier-than>2018-05-14T07:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t17">
+    <title>外部設計</title>
+    <type>group</type>
+    <start-constraint-date>2018-05-21T23:00:00.000Z</start-constraint-date>
+    <child-task idref="t18"/>
+    <child-task idref="t26"/>
+    <prerequisite-task idref="t16"/>
+    <start-no-earlier-than>2018-05-21T23:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t18">
+    <title> ワイヤーフレーム</title>
+    <effort>432000</effort>
+    <start-constraint-date>2018-05-21T23:00:00.000Z</start-constraint-date>
+    <start-no-earlier-than>2018-05-21T23:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t22">
+    <title>業務分析</title>
+    <effort>288000</effort>
+    <start-constraint-date>2018-06-11T07:00:00.000Z</start-constraint-date>
+    <start-no-earlier-than>2018-06-11T07:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t23">
+    <title>画像設計</title>
+    <effort>144000</effort>
+    <start-constraint-date>2018-06-25T07:00:00.000Z</start-constraint-date>
+    <prerequisite-task idref="t22"/>
+    <start-no-earlier-than>2018-06-25T07:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t24">
+    <title>標準化（記述内容、記述方法）</title>
+    <effort>144000</effort>
+    <prerequisite-task idref="t31"/>
+  </task>
+  <task id="t25">
+    <title>コード設計</title>
+    <effort>432000</effort>
+    <prerequisite-task idref="t24"/>
+  </task>
+  <task id="t26">
+    <title>デザインカンプ</title>
+    <type>group</type>
+    <child-task idref="t22"/>
+    <child-task idref="t23"/>
+    <prerequisite-task idref="t18"/>
+  </task>
+  <task id="t27">
+    <title>内部設計（Database設計）</title>
+    <type>group</type>
+    <child-task idref="t28"/>
+    <child-task idref="t29"/>
+    <child-task idref="t30"/>
+    <prerequisite-task idref="t25"/>
+  </task>
+  <task id="t28">
+    <title>入力画面設計書</title>
+    <effort>144000</effort>
+  </task>
+  <task id="t29">
+    <title>格納しておく情報を整理</title>
+    <effort>288000</effort>
+  </task>
+  <task id="t30">
+    <title>データベーステーブル設計</title>
+    <effort>288000</effort>
+    <prerequisite-task idref="t29"/>
+  </task>
+  <task id="t31">
+    <title>外部設計完了</title>
+    <type>milestone</type>
+    <prerequisite-task idref="t26"/>
+  </task>
+  <task id="t32">
+    <title>内部設計完了</title>
+    <type>milestone</type>
+    <prerequisite-task idref="t27"/>
+    <prerequisite-task idref="t33"/>
+  </task>
+  <task id="t33">
+    <title>内部設計（入出力関連設計）</title>
+    <effort>288000</effort>
+    <prerequisite-task idref="t27"/>
+  </task>
+  <task id="t34">
+    <title>プログラム設計</title>
+    <type>group</type>
+    <child-task idref="t35"/>
+    <child-task idref="t36"/>
+    <child-task idref="t37"/>
+    <prerequisite-task idref="t32"/>
+  </task>
+  <task id="t35">
+    <title>モジュール分割</title>
+    <effort>288000</effort>
+  </task>
+  <task id="t36">
+    <title>モジュール設計</title>
+    <effort>288000</effort>
+  </task>
+  <task id="t37">
+    <title>インターフェース設計</title>
+    <effort>288000</effort>
+  </task>
+  <task id="t39">
+    <title>プロトタイプ（商品検索から商品購入までの流れ）</title>
+    <type>group</type>
+    <child-task idref="t41"/>
+    <child-task idref="t40"/>
+    <prerequisite-task idref="t34"/>
+  </task>
+  <task id="t40">
+    <title>テスト&amp;デバッグ</title>
+    <effort>288000</effort>
+    <prerequisite-task idref="t41"/>
+  </task>
+  <task id="t41">
+    <title>PHPにてプログラム実現</title>
+    <effort>432000</effort>
+  </task>
+  <task id="t42">
+    <title>顧客情報登録変更</title>
+    <effort>288000</effort>
+  </task>
+  <task id="t43">
+    <title>顧客管理システムの構築</title>
+    <type>group</type>
+    <child-task idref="t42"/>
+    <child-task idref="t44"/>
+    <prerequisite-task idref="t39"/>
+  </task>
+  <task id="t44">
+    <title>ログイン認証機能</title>
+    <effort>144000</effort>
+    <prerequisite-task idref="t42"/>
+  </task>
+  <task id="t45">
+    <title>プロジェクト完了</title>
+    <type>milestone</type>
+    <prerequisite-task idref="t43"/>
+  </task>
+  <critical-path root="-1" enabled="false" resources="false">
+    <color space="srgb" r="1" g="0.5" b="0.5"/>
+  </critical-path>
+</scenario>
