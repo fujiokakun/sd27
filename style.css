@@ -1,0 +1,115 @@
+.iphone_wrapper {
+    position: relative;
+    width: 25%;
+}
+.iphone {
+    position: absolute;
+    width: 100%;
+    z-index: 100;
+}
+
+.inner_wrapper {
+    position: absolute;
+    top: 5.1vw;
+    left: 6.75%;
+    height: 38vw;
+    width: 86.5%;
+    /* background-color: rgba(99,192,63, .5); */
+    overflow: hidden;
+    z-index: 10000;
+}   
+
+.iphone_top {
+    position: absolute;
+    width: 100%;
+    top: 0%;
+    left: 0%;
+    z-index: 101;
+}
+
+.iphone_text {
+    position: absolute;
+    width: 100%;
+    top: 9%;
+    left: 0%;
+}
+
+.hanboku {
+    position: absolute;
+    top: 22%;
+    left: 6%;
+    width: 80%;
+    border-radius: 6%;
+    box-shadow: .5rem .5rem 3rem #000;
+    z-index: 50;
+    animation-name: hanboku;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards; /* Debug */
+}
+
+@keyframes hanboku {
+    0% {
+        position: absolute;
+        top: 22%;
+        left: 6%;
+        width: 80%;
+        opacity: 1;
+    }
+    100% {
+        left: -100%;
+        transform: scale(0.5);
+        opacity: 0;
+    }
+}
+
+.hashimoto {
+    position: absolute;
+    top: 27%;
+    left: 12%;
+    width: 80%;
+    border-radius: 6%;
+    
+    opacity: .6;
+    z-index: 49;
+    animation: hashimoto1 .8s 1.2s forwards, hashimoto2 .8s 2.2s forwards;
+
+}
+
+@keyframes hashimoto1 {
+    100% {
+       
+        top: 27%;
+        left: 12%;
+        width: 80%;
+        opacity: .6;
+    }
+    100% {
+      
+        top: 22%;
+        left: 6%;
+        width: 80%;
+        opacity: 1;
+        box-shadow: .5rem .5rem 3rem #000;
+    }
+    /* 100% {
+        left: -100%;
+        transform: scale(0.5);
+        opacity: 0;
+    } */
+}
+
+@keyframes hashimoto2 {
+    0% {
+        top: 22%;
+        left: 6%;
+        width: 80%;
+        opacity: 1;
+        box-shadow: .5rem .5rem 3rem #000;
+    }
+    100% {
+        left: -100%;
+        transform: scale(0.5);
+        opacity: 0;
+    }
+}
