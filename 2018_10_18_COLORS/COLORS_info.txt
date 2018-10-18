@@ -1,0 +1,8 @@
+<!-- Google font-->
+
+
+    英語のフォント：
+	<link href="https://fonts.googleapis.com/css?family=Belleza" rel="stylesheet">
+
+    日本語のフォント：
+	<link href="https://fonts.googleapis.com/css?family=Sawarabi+Gothic" rel="stylesheet">
